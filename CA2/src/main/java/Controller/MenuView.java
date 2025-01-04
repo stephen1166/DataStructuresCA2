@@ -10,19 +10,20 @@ import static Main.MainMenu.stage;
 
 public class MenuView {
 
-    private FXMLLoader fxmlLoaderIng=new FXMLLoader(getClass().getResource("ingredients-view.fxml"));
 
-    private Scene ingredientsView=new Scene(fxmlLoaderIng.load());
 
     public MenuView() throws IOException {
     }
 
     @FXML
-    protected void Drinks() {
+    protected void Drinks() throws IOException {
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("drinks-view.fxml"));
+        stage.setScene(new Scene(fxmlLoader.load()));
     }
 
     @FXML
-    protected void Ingredients() {
-        stage.setScene(ingredientsView);
+    protected void Ingredients() throws IOException {
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("ingredients-view.fxml"));
+        stage.setScene(new Scene(fxmlLoader.load()));
     }
 }

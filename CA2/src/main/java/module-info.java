@@ -7,6 +7,4 @@ module com.example.ca2 {
     exports Main;
     opens Controller to javafx.fxml;
     exports Controller;
-    opens Utils to javafx.fxml;
-    exports Utils;
 }

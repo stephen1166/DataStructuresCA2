@@ -10,12 +10,14 @@ import java.io.IOException;
 public class MainMenu extends Application {
 
     public static Stage stage;
+    public static Scene mainScene;
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("menu-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        mainScene = new Scene(fxmlLoader.load());
         stage.setTitle("Drinks Information System");
-        stage.setScene(scene);
+        stage.setScene(mainScene);
         stage.show();
         this.stage=stage;
     }
