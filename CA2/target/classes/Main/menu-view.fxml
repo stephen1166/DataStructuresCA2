@@ -12,8 +12,11 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
+    <ToolBar>
+        <Button text="Back"/>
+    </ToolBar>
 
-    <Label fx:id="Text"/>
+    <Label text="Drinks Info System"/>
     <Button text="Drinks" onAction="#Drinks"/>
     <Button text="Ingredients" onAction="#Ingredients"/>
 </VBox>
