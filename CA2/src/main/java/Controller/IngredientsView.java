@@ -1,11 +1,15 @@
 package Controller;
 
-import Classes.Ingredient;
-import Utils.LinkedList;
+import javafx.fxml.FXML;
+
+import static Main.MainMenu.stage;
+import static Main.MainMenu.mainScene;
+
 
 public class IngredientsView {
 
-    private LinkedList<Ingredient> ingredientLinkedList=new LinkedList<>();
-
-
+    @FXML
+    protected void Back(){
+        stage.setScene(mainScene);
+    }
 }
