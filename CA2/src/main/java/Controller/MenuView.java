@@ -10,15 +10,20 @@ import static Main.MainMenu.stage;
 
 public class MenuView {
 
-    private FXMLLoader fxmlLoaderIng=new FXMLLoader(getClass().getResource("ingredients-view.fxml"));
+    private FXMLLoader fxmlLoaderIngrediant=new FXMLLoader(getClass().getResource("ingredients-view.fxml"));
 
-    private Scene ingredientsView=new Scene(fxmlLoaderIng.load());
+    private FXMLLoader fxmlLoaderDrink=new FXMLLoader(getClass().getResource("drinks-view.fxml"));
+
+    private Scene ingredientsView=new Scene(fxmlLoaderIngrediant.load());
+
+    private Scene drinksView=new Scene(fxmlLoaderDrink.load());
 
     public MenuView() throws IOException {
     }
 
     @FXML
     protected void Drinks() {
+        stage.setScene(drinksView);
     }
 
     @FXML
