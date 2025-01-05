@@ -1,28 +1,33 @@
 package Util;
 
-public class Hashmap{
+public class Hashmap<E> {
 
-    private String[] hashTable;
-    private int size=-1;
+    private E[] hashTable;
 
-    public Hashmap(int size){
-        this.size=size;
-        hashTable=new String[size];
+    public Hashmap(int size) {
+        hashTable = (E[]) new Object[size];
     }
 
-    public int hash(String item){
-        int total=0;
-        for(int i=0;i<item.length();i++){
-            total+=item.charAt(i);
+    public int hash(E item) {
+        int total = 0;
+        for (int i = 0; i < item.toString().length(); i++) {
+            total += item.toString().charAt(i);
         }
-        return total%size;
+        return total % hashTable.length;
     }
 
-    public void insert(String value){
-        int index=hash(value);
-        for(int i=0;i<hashTable[index].length();i++){
-            if(hashTable[index]==null){
-                hashTable[index]=value;
+    public void insert(E value) {
+        int index = hash(value);
+        for (int i = 0; i <= hashTable.length; i++) {
+            if (hashTable[index] != null) {
+                if (index >= hashTable.length - 1) {
+                    index = 0;
+                } else {
+                    index++;
+                }
+            } else {
+                hashTable[index] = value;
+                return;
             }
         }
     }

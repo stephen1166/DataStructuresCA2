@@ -17,8 +17,6 @@ import static Main.MainMenu.mainScene;
 
 public class IngredientsView implements Initializable {
 
-    private Hashmap IngredTable=new Hashmap(50);
-
     @FXML
     private TableView<Ingredient> IngredientsList;
 
