@@ -15,7 +15,7 @@
         <VBox alignment="CENTER">
 
         </VBox>
-        <TableView prefHeight="363.0" prefWidth="860.0">
+        <TableView fx:id="IngredientsList" prefHeight="363.0" prefWidth="860.0">
             <columns>
                 <TableColumn fx:id="nameCol" text="Name" reorderable="false"/>
                 <TableColumn fx:id="textureCol" text="Texture" reorderable="false"/>
