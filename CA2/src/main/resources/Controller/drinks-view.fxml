@@ -17,11 +17,11 @@
 
     <VBox alignment="CENTER" spacing="10">
         <VBox>
-            <TextField fx:id="nameField" text="Name" />
-            <TextField fx:id="typeField" text="Type" />
-            <TextField fx:id="originField" text="Origin" />
-            <TextField fx:id="descriptionField" text="Description" />
-            <TextField fx:id="imageField" text="Image URL" />
+            <TextField fx:id="nameField" promptText="Name" />
+            <TextField fx:id="typeField" promptText="Type" />
+            <TextField fx:id="originField" promptText="Origin" />
+            <TextField fx:id="descriptionField" promptText="Description" />
+            <TextField fx:id="imageField" promptText="Image URL" />
         </VBox>
 
         <VBox minWidth="200" translateX="10">

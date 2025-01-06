@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -16,7 +17,7 @@ import java.util.ResourceBundle;
 import static Main.MainMenu.mainScene;
 import static Main.MainMenu.stage;
 
-public class DrinksView {
+public class DrinksView implements Initializable {
 
     @FXML
     private TextField nameField;
