@@ -32,6 +32,8 @@ public class Hashmap<E> {
                 hashTable[index] = value; //Insert value into the index
                 return;
             }
+            System.out.println("Hash Table is full"); //If table is full, inform user
         }
     }
+
 }
