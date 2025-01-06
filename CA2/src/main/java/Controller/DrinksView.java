@@ -47,7 +47,7 @@ public class DrinksView implements Initializable {
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // Linking Columns to objects in Drink.java
+        // Linking Columns in drinks-view.FXML to objects in Drink.java
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
         originColumn.setCellValueFactory(new PropertyValueFactory<>("origin"));
@@ -63,6 +63,7 @@ public class DrinksView implements Initializable {
         Drink newDrink = new Drink(name, type, origin, description, image);
         drinks.add(newDrink);
 
+        //Prints drinks into console for debugging
         System.out.println(drinks);
     }
 
@@ -82,7 +83,6 @@ public class DrinksView implements Initializable {
         }
 
         addDrink(name, type, origin, description, image);
-
         tableView.refresh();
     }
 
